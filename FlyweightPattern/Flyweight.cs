@@ -21,47 +21,38 @@ namespace FlyweightPattern
         public int GetCountMonster() { return Monsters.Count; }
 
     }
-    public class TypeMonsterFactory
+    public class TypeMonsterFactory //Flyweight Factory
     {
         private Dictionary<String, TypeMoster> typeMonsters = new Dictionary<String, TypeMoster>();
        
         public TypeMoster GetTypeMonster(TypeMoster type)
         {
-            //TypeMoster typeMonster = new TypeMoster();
             string key = type.GetKeyTypeMonster();
             if (typeMonsters.ContainsKey(key))//new ton tai thi lay trong typeMosters ra
             {
                 type = typeMonsters[key];
-                Console.WriteLine("ton tai nen lay trong typeMosters ra");
+                Console.WriteLine(" Lay trong typeMosters ra");
             }
             else 
             {
                 typeMonsters.Add(key, type); //neu khong thi them typeMoster moi
-                Console.WriteLine("khong ton tai nen them typeMoster moi");
+                Console.WriteLine(" Them typeMoster moi");
             }
             return type;
         }
     }
-    public  class Monster
+    public  class Monster//Context
     {
-        public int x;
+        public int x;    //Extrinsic State
         public int y;
-        public TypeMoster type;
-      /*  public void Draw(Graphics g)
-        {
-            
-        }*/
-
+        public TypeMoster type; //Intrinsic State
+       
     }
-    public class TypeMoster 
+    public class TypeMoster //Flyweight
     {
         public String name;
         public Bitmap texture;
         public Color color;
-        /*public void Draw(int x, int y)
-        {
-           
-        }*/
         public string GetKeyTypeMonster()
         {
             List<string> key = new List<string>();

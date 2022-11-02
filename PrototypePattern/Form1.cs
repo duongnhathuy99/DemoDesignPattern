@@ -12,7 +12,7 @@ namespace PrototypePattern
 {
     public partial class Form1 : Form
     {
-        Characters s1 = new Characters();
+        Characters s1; //= new Characters();
         Characters s2 /*= new Characters()*/;
         Characters s3 /*= new Characters()*/;
         Graphics g;
@@ -22,8 +22,6 @@ namespace PrototypePattern
         {
             InitializeComponent();
             
-            //g.DrawImageUnscaled(s1._transformation.bitmap,0,0);
-
             s1 = new Characters()
             {
                 health = 100,
@@ -46,26 +44,6 @@ namespace PrototypePattern
             load();
         }
 
-       /* private void button1_Click(object sender, EventArgs e)
-        {
-            // s2 = (Characters)s1.ShallowClone();
-            s2.name = textBox1.Text;
-            s2.strength = int.Parse(textBox2.Text);
-            s2.health = int.Parse(textBox3.Text);
-            s2._transformation.power = int.Parse(textBox4.Text);
-            Load();
-        }*/
-
-        /*private void button3_Click(object sender, EventArgs e)
-        {
-            //s3 = (Characters)s1.DeepClone();
-            s3.name = textBox12.Text;
-            s3.strength = int.Parse(textBox11.Text);
-            s3.health = int.Parse(textBox10.Text);
-            s3._transformation.power = int.Parse(textBox9.Text);
-            Load();
-        }*/
-        
         private void button2_Click(object sender, EventArgs e)
         {
             s1.name=textBox8.Text  ;

@@ -13,8 +13,8 @@ namespace FlyweightPattern
     public partial class Form1 : Form
     {
         World world = new World();
-        Monster mon;
 
+        Monster mon;
         Bitmap monster;
         Graphics g;
         Graphics g1;
@@ -172,7 +172,6 @@ namespace FlyweightPattern
                     mau = Color.Green;
                     break;
             }
-
             Label lb = new Label();
             int i = world.GetCountMonster();
             lb.AutoSize = true;
@@ -182,6 +181,7 @@ namespace FlyweightPattern
             lb.ForeColor = mau;
             lb.Font = new Font("Microsoft Sans Serif", 12.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))); ;
             this.Controls.Add(lb);
+
             mon = new Monster()
             {
                 x = 100 * (i % 8)+10,

@@ -12,10 +12,6 @@ namespace StatePattern
     {
         NinjaState _state = null;
 
-        public Ninja ShallowCopy()
-        {
-            return (Ninja)this.MemberwiseClone();
-        }
         public Ninja() { 
             _state = new idleState();
             _state.SetPlayer(this);

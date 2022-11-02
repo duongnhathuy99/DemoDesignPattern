@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypePattern", "Prototy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyweightPattern", "FlyweightPattern\FlyweightPattern.csproj", "{01DB1C10-1304-4D93-9EE7-426E78CD0C31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visitor", "Visitor\Visitor.csproj", "{EFD5CB81-AADD-4EFF-B2B3-F3269FBB112B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{01DB1C10-1304-4D93-9EE7-426E78CD0C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01DB1C10-1304-4D93-9EE7-426E78CD0C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01DB1C10-1304-4D93-9EE7-426E78CD0C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD5CB81-AADD-4EFF-B2B3-F3269FBB112B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD5CB81-AADD-4EFF-B2B3-F3269FBB112B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD5CB81-AADD-4EFF-B2B3-F3269FBB112B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD5CB81-AADD-4EFF-B2B3-F3269FBB112B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,7 +13,7 @@ namespace StatePattern
 {
     public partial class Form1 : Form
     {
-        static int time;
+        int time;
         Bitmap buffer;
         Graphics g;
         Graphics g1;
