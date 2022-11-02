@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animation", "Animation\Anim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypePattern", "PrototypePattern\PrototypePattern.csproj", "{FA1B15AF-7E87-4C80-80EF-59F6AB43BA6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyweightPattern", "FlyweightPattern\FlyweightPattern.csproj", "{01DB1C10-1304-4D93-9EE7-426E78CD0C31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FA1B15AF-7E87-4C80-80EF-59F6AB43BA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA1B15AF-7E87-4C80-80EF-59F6AB43BA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA1B15AF-7E87-4C80-80EF-59F6AB43BA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01DB1C10-1304-4D93-9EE7-426E78CD0C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01DB1C10-1304-4D93-9EE7-426E78CD0C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01DB1C10-1304-4D93-9EE7-426E78CD0C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01DB1C10-1304-4D93-9EE7-426E78CD0C31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
