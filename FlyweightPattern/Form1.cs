@@ -29,25 +29,25 @@ namespace FlyweightPattern
         }
         void load() {
             
-            Bitmap tex= new Bitmap(32 * 2, 32 * 2);
+            Bitmap tex= new Bitmap(64, 64);
             g = Graphics.FromImage(tex);
-            g.DrawImage(monster, 0, 0, new Rectangle(  32 * 2, 0, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+            g.DrawImage(monster, 0, 0, new Rectangle(  32 * 2, 0, 64, 64), GraphicsUnit.Pixel);
             mon = new Monster()
             {
                 x = 10,
                 y=30,
-                type=new TypeMoster() {name="Monster A", color = Color.Red , texture = tex }
+                type=new TypeMoster() {name="Bat", color = Color.Red , texture = tex }
             };
             world.addMonster(mon);
 
-            tex = new Bitmap(32 * 2, 32 * 2);
+            tex = new Bitmap(64, 64);
             g = Graphics.FromImage(tex);
-            g.DrawImage(monster, 0, 0, new Rectangle(128 * 2, 0, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+            g.DrawImage(monster, 0, 0, new Rectangle(128 * 2, 0, 64, 64), GraphicsUnit.Pixel);
             mon = new Monster()
             {
                 x = 110,
                 y = 30,
-                type = new TypeMoster() { name = "Monster B", color = Color.Red, texture = tex }
+                type = new TypeMoster() { name = "Octopus", color = Color.Red, texture = tex }
             };
             world.addMonster(mon);
 
@@ -56,18 +56,18 @@ namespace FlyweightPattern
             {
                 x = 210,
                 y = 30,
-                type = new TypeMoster() { name = "Monster A", color = Color.Red, texture = tex }
+                type = new TypeMoster() { name = "Bat", color = Color.Red, texture = tex }
             };
             world.addMonster(mon);
 
-            tex = new Bitmap(32 * 2, 32 * 2);
+            tex = new Bitmap(64, 64);
             g = Graphics.FromImage(tex);
-            g.DrawImage(monster, 0, 0, new Rectangle(224 * 2, 0, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+            g.DrawImage(monster, 0, 0, new Rectangle(224 * 2, 0, 64, 64), GraphicsUnit.Pixel);
             mon = new Monster()
             {
                 x = 310,
                 y = 30,
-                type = new TypeMoster() { name = "Monster C", color = Color.Orange, texture = tex }
+                type = new TypeMoster() { name = "Bee", color = Color.Orange, texture = tex }
             };
             world.addMonster(mon);
 
@@ -75,36 +75,34 @@ namespace FlyweightPattern
             {
                 x = 410,
                 y = 30,
-                type = new TypeMoster() { name = "Monster C", color = Color.Orange, texture = tex }
+                type = new TypeMoster() { name = "Bee", color = Color.Orange, texture = tex }
             };
             world.addMonster(mon);
 
-            tex = new Bitmap(32 * 2, 32 * 2);
+            tex = new Bitmap(64, 64);
             g = Graphics.FromImage(tex);
-            g.DrawImage(monster, 0, 0, new Rectangle(32 * 2, 0, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+            g.DrawImage(monster, 0, 0, new Rectangle(32 * 2, 0, 64, 64), GraphicsUnit.Pixel);
             mon = new Monster()
             {
                 x = 510,
                 y = 30,
-                type = new TypeMoster() { name = "Monster A", color = Color.Blue, texture = tex }
+                type = new TypeMoster() { name = "Bat", color = Color.Blue, texture = tex }
             };
             world.addMonster(mon);
             mon = new Monster()
             {
                 x = 610,
                 y = 30,
-                type = new TypeMoster() { name = "Monster A", color = Color.Blue, texture = tex }
+                type = new TypeMoster() { name = "Bat", color = Color.Blue, texture = tex }
             };
             world.addMonster(mon);
             
-
-
             for (int i = 0; i < world.GetCountMonster(); i++)
             {
                 Label lb=new Label();
 
                 lb.AutoSize = true;
-                lb.Location = new Point(100*(i%8), 100*(i/8+1));
+                lb.Location = new Point(100*(i%8)+15, 100*(i/8+1));
                 lb.Name = "listlb"+i.ToString();
                 lb.Text = world.GetMonster(i).type.name;
                 lb.ForeColor = world.GetMonster(i).type.color;
@@ -124,33 +122,33 @@ namespace FlyweightPattern
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Bitmap tex = new Bitmap(32 * 2-1, 32 * 2);
+            Bitmap tex = new Bitmap(64, 64);
             g = Graphics.FromImage(tex);
             
             switch (comboBox1.SelectedIndex) {
                 case 0:
-                    g.DrawImage(monster, 0, 0, new Rectangle(32 * 2, 0, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+                    g.DrawImage(monster, 0, 0, new Rectangle(32 * 2, 0, 64, 64), GraphicsUnit.Pixel);
                     break;
                 case 1:
-                    g.DrawImage(monster, 0, 0, new Rectangle(128 * 2, 0, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+                    g.DrawImage(monster, 0, 0, new Rectangle(128 * 2, 0, 64, 64), GraphicsUnit.Pixel);
                     break;
                 case 2:
-                    g.DrawImage(monster, 0, 0, new Rectangle(224 * 2, 0, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+                    g.DrawImage(monster, 0, 0, new Rectangle(224 * 2, 0, 64, 64), GraphicsUnit.Pixel);
                     break;
                 case 3:
-                    g.DrawImage(monster, 0, 0, new Rectangle(320 * 2, 0, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+                    g.DrawImage(monster, 0, 0, new Rectangle(320 * 2, 0, 64, 64), GraphicsUnit.Pixel);
                     break;
                 case 4:
-                    g.DrawImage(monster, 0, 0, new Rectangle(32 * 2, 128*2, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+                    g.DrawImage(monster, 0, 0, new Rectangle(32 * 2, 128*2, 64, 64), GraphicsUnit.Pixel);
                     break;
                 case 5:
-                    g.DrawImage(monster, 0, 0, new Rectangle(128 * 2, 128*2, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+                    g.DrawImage(monster, 0, 0, new Rectangle(128 * 2, 128*2, 64, 64), GraphicsUnit.Pixel);
                     break;
                 case 6:
-                    g.DrawImage(monster, 0, 0, new Rectangle(224 * 2, 128*2, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+                    g.DrawImage(monster, 0, 0, new Rectangle(224 * 2, 128*2, 64, 64), GraphicsUnit.Pixel);
                     break;
                 case 7:
-                    g.DrawImage(monster, 0, 0, new Rectangle(320 * 2, 128*2, 32 * 2, 32 * 2), GraphicsUnit.Pixel);
+                    g.DrawImage(monster, 0, 0, new Rectangle(320 * 2, 128*2, 64, 64), GraphicsUnit.Pixel);
                     break;
             }
             Color mau=new Color();
@@ -175,7 +173,7 @@ namespace FlyweightPattern
             Label lb = new Label();
             int i = world.GetCountMonster();
             lb.AutoSize = true;
-            lb.Location = new Point(100 * (i % 8), 100 * (i / 8 + 1));
+            lb.Location = new Point(100 * (i % 8)+15, 100 * (i / 8 + 1));
             lb.Name = "listlb" + i.ToString();
             lb.Text = comboBox1.GetItemText(comboBox1.SelectedItem);
             lb.ForeColor = mau;

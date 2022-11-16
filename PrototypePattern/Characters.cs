@@ -34,7 +34,7 @@ namespace PrototypePattern
         public Transformation _transformation;
         public IPrototype ShallowClone()
         {
-            return (Characters)this.MemberwiseClone();
+            return (IPrototype)this.MemberwiseClone();
         }
         public IPrototype DeepClone()
         {

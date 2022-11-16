@@ -23,7 +23,7 @@ namespace StatePattern
         public abstract void update(int time);
     }
 
-     class idleState : NinjaState
+    class idleState : NinjaState
     {
         public override void handleInputKeyDown( Keys key) {
             if (key == Keys.Left || key == Keys.Right)
@@ -39,7 +39,7 @@ namespace StatePattern
         public override void handleInputKeyUp( Keys key) { }
         public override void update(int time) { Animations.GetInstance().drawIdle(time); }
     }
-     class runState : NinjaState
+    class runState : NinjaState
     {
         public override void handleInputKeyDown( Keys key) {}
         public override void handleInputKeyUp( Keys key) { 
@@ -54,12 +54,12 @@ namespace StatePattern
         }
         public override void update(int time) { Animations.GetInstance().drawRun(time); }
     }
-     class attackState : NinjaState
+    class attackState : NinjaState
     {
         public override void handleInputKeyDown( Keys key) { }
         public override void handleInputKeyUp( Keys key) { }
         public override void update(int time) { 
-            if(Animations.GetInstance().drawAttack(time)==0)
+            if(Animations.GetInstance().drawAttack()==0)
                 _ninja.setState(new idleState());
         }
     }
@@ -69,7 +69,7 @@ namespace StatePattern
         public override void handleInputKeyUp(Keys key) { }
         public override void update(int time)
         {
-            if (Animations.GetInstance().drawJump(time) == 0)
+            if (Animations.GetInstance().drawJump() == 0)
                 _ninja.setState(new idleState());
         }
     }

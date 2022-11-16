@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypePattern", "Prototy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyweightPattern", "FlyweightPattern\FlyweightPattern.csproj", "{01DB1C10-1304-4D93-9EE7-426E78CD0C31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visitor", "Visitor\Visitor.csproj", "{EFD5CB81-AADD-4EFF-B2B3-F3269FBB112B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorPattern", "Visitor\VisitorPattern.csproj", "{EFD5CB81-AADD-4EFF-B2B3-F3269FBB112B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visitor + State", "Visitor + State\Visitor + State.csproj", "{54F5D98C-873F-4A96-B148-A03304309FDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{EFD5CB81-AADD-4EFF-B2B3-F3269FBB112B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFD5CB81-AADD-4EFF-B2B3-F3269FBB112B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFD5CB81-AADD-4EFF-B2B3-F3269FBB112B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F5D98C-873F-4A96-B148-A03304309FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F5D98C-873F-4A96-B148-A03304309FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F5D98C-873F-4A96-B148-A03304309FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F5D98C-873F-4A96-B148-A03304309FDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

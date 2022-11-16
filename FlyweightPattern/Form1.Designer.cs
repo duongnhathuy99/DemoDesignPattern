@@ -49,14 +49,14 @@ namespace FlyweightPattern
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Monster A",
-            "Monster B",
-            "Monster C",
-            "Monster D",
-            "Monster E",
-            "Monster F",
-            "Monster G",
-            "Monster H"});
+            "Bat",
+            "Octopus",
+            "Bee",
+            "Jellyfish",
+            "Mouse",
+            "Fish",
+            "Scorpion",
+            "Spider"});
             this.comboBox1.Location = new System.Drawing.Point(274, 389);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);

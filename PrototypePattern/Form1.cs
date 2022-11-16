@@ -12,17 +12,17 @@ namespace PrototypePattern
 {
     public partial class Form1 : Form
     {
-        Characters s1; //= new Characters();
-        Characters s2 /*= new Characters()*/;
-        Characters s3 /*= new Characters()*/;
+        Characters char1; 
+        Characters char2;
+        Characters char3;
         Graphics g;
         Graphics g1;
         Bitmap buffer;
         public Form1()
         {
             InitializeComponent();
-            
-            s1 = new Characters()
+
+            char1 = new Characters()
             {
                 health = 100,
                 strength = 10,
@@ -33,8 +33,8 @@ namespace PrototypePattern
                     bitmap = new Bitmap(Image.FromFile("saiyan.png"), 150, 300),
                 }
             };
-            s2 = (Characters)s1.ShallowClone();
-            s3 = (Characters)s1.DeepClone();
+            char2 = (Characters)char1.ShallowClone();
+            char3 = (Characters)char1.DeepClone();
 
 
             comboBox1.SelectedIndex = 0;
@@ -46,46 +46,46 @@ namespace PrototypePattern
 
         private void button2_Click(object sender, EventArgs e)
         {
-            s1.name=textBox8.Text  ;
-            s1.strength = int.Parse(textBox7.Text);
-            s1.health = int.Parse(textBox6.Text);
-            s1._transformation.power = int.Parse(textBox5.Text);
+            char1.name=textBox8.Text  ;
+            char1.strength = int.Parse(textBox7.Text);
+            char1.health = int.Parse(textBox6.Text);
+            char1._transformation.power = int.Parse(textBox5.Text);
             if (comboBox1.SelectedIndex == 0)
-                s1._transformation.bitmap = new Bitmap(Image.FromFile("saiyan.png"), 150, 300);
+                char1._transformation.bitmap = new Bitmap(Image.FromFile("saiyan.png"), 150, 300);
             else if(comboBox1.SelectedIndex == 1)
-                s1._transformation.bitmap = new Bitmap(Image.FromFile("saiyanBlue.png"), 150, 300);
+                char1._transformation.bitmap = new Bitmap(Image.FromFile("saiyanBlue.png"), 150, 300);
             else
-                s1._transformation.bitmap = new Bitmap(Image.FromFile("saiyanGod.png"), 150, 300);
+                char1._transformation.bitmap = new Bitmap(Image.FromFile("saiyanGod.png"), 150, 300);
             g.FillRectangle(new SolidBrush(SystemColors.Control), new Rectangle(0, 0, this.ClientSize.Width, this.ClientSize.Height));
             load();
             g1.DrawImage(buffer, 0, 0);
         }
         void load()
         {
-            if (s2 != null)
+            if (char2 != null)
             {
-                textBox1.Text = s2.name;
-                textBox2.Text = s2.strength.ToString();
-                textBox3.Text = s2.health.ToString();
-                textBox4.Text = s2._transformation.power.ToString();
+                textBox1.Text = char2.name;
+                textBox2.Text = char2.strength.ToString();
+                textBox3.Text = char2.health.ToString();
+                textBox4.Text = char2._transformation.power.ToString();
             }
-            if (s3 != null)
+            if (char3 != null)
             {
-                textBox12.Text = s3.name;
-                textBox11.Text = s3.strength.ToString();
-                textBox10.Text = s3.health.ToString();
-                textBox9.Text = s3._transformation.power.ToString();
+                textBox12.Text = char3.name;
+                textBox11.Text = char3.strength.ToString();
+                textBox10.Text = char3.health.ToString();
+                textBox9.Text = char3._transformation.power.ToString();
             }
-            if (s1 != null)
+            if (char1 != null)
             {
-                textBox8.Text = s1.name;
-                textBox7.Text = s1.strength.ToString();
-                textBox6.Text = s1.health.ToString();
-                textBox5.Text = s1._transformation.power.ToString();
+                textBox8.Text = char1.name;
+                textBox7.Text = char1.strength.ToString();
+                textBox6.Text = char1.health.ToString();
+                textBox5.Text = char1._transformation.power.ToString();
             }
-            g.DrawImage(s1._transformation.bitmap, 460, 210);
-            g.DrawImage(s2._transformation.bitmap, 80, 210);
-            g.DrawImage(s3._transformation.bitmap, 850, 210);
+            g.DrawImage(char1._transformation.bitmap, 460, 210);
+            g.DrawImage(char2._transformation.bitmap, 80, 210);
+            g.DrawImage(char3._transformation.bitmap, 850, 210);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
